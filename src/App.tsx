@@ -3,7 +3,6 @@ import Sidebar from './components/Sidebar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import List from './components/List';
 import Dashboard from './pages/Dashboard';
-import { Chart } from 'chart.js';
 import BarChart from './components/BarChart';
 import Activity from './components/Activity';
 import Dropdown from './components/Dropdown';

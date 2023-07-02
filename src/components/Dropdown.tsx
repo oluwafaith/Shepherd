@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from 'react';
 import { DropdownData } from '../data/sidebarData';
 import { RiCalendar2Fill } from 'react-icons/ri';

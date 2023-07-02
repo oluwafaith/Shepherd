@@ -6,7 +6,6 @@ import {
   FaLinkedin,
   FaTwitter,
   FaSketch,
-  FaHome,
   FaUserFriends,
   FaFolderOpen,
   FaCalendarAlt,

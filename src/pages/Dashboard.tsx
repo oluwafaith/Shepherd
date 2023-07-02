@@ -1,4 +1,3 @@
-import React from 'react';
 import { MdOutlineLibraryBooks } from 'react-icons/md';
 import Sidebar from '../components/Sidebar';
 import BarChart from '../components/BarChart';

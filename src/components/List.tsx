@@ -1,11 +1,4 @@
-import React from 'react';
-import {
-  FiActivity,
-  FiStar,
-  FiMessageCircle,
-  FiHeart,
-  FiThumbsUp,
-} from 'react-icons/fi';
+import { FiActivity, FiStar, FiMessageCircle } from 'react-icons/fi';
 
 const activities = [
   {
