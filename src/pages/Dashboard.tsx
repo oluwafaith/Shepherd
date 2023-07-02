@@ -1,10 +1,12 @@
-import { MdOutlineLibraryBooks } from 'react-icons/md';
 import Sidebar from '../components/Sidebar';
 import BarChart from '../components/BarChart';
 import Activity from '../components/Activity';
 import List from '../components/List';
 import Scheduler from '../components/Scheduler';
-import Carousel from '../components/Carousel';
+import Header from '../components/Header';
+import Summary from '../components/Summary';
+import Flashcard from '../components/Flashcard';
+import CardFooter from '../components/CardFooter';
 function Dashboard() {
   return (
     <main className="flex  bg-white">
@@ -12,56 +14,31 @@ function Dashboard() {
         <Sidebar />
       </aside>
 
-      <section className=" mr-2 h-screen  w-5/6 border-r-2  border-black  ">
-        <section className="h-1/6 bg-gray-100">hi</section>
+      <section className=" ml-2 mr-2  h-screen w-5/6 border-r-2  border-black  ">
+        <section className="h-0.5/6 m-2 ">
+          <Header />
+        </section>
 
-        <section className=" flex h-2/6 justify-around">
-          <aside className="m-2  w-2/5 rounded-lg border-solid border-gray-500 ">
-            <article className="bg-green-200">
-              <h3 className="flex items-center justify-start ">
-                <span className="mr-2">
-                  <MdOutlineLibraryBooks />
-                </span>
-                Weekly Summary
-              </h3>
-              <div className="flex justify-between">
-                <div>
-                  <h4>Cards studied</h4>
-                  <p>0 cards</p>
-                </div>
-                <div className="">
-                  <h4>Time studied</h4>
-                  <p>05hrs 30mins</p>
-                </div>
-              </div>
-            </article>
+        <section className=" relative flex  h-2/6 justify-around ">
+          <aside className="m-2 w-2/5  flex-grow  flex-col rounded-lg border border-gray-200 bg-gray-300 shadow dark:border-gray-700 dark:bg-gray-800 ">
+            <Summary />
+            <hr />
 
-            <article className=" bg-blue-100">
-              <h4>Flashcard Performance</h4>
-              <article className="flex">
-                <div className="flex">
-                  <p className="h-4 w-4 border-solid border-black bg-red-100"></p>
-                  <span>Got it right</span>
-                  <span>40%</span>
-                </div>
-              </article>
-              <article>
-                <Carousel />
-              </article>
-            </article>
+            <Flashcard />
+            <CardFooter />
           </aside>
 
-          <div className="m-2  w-3/5 rounded-md border-solid bg-pink-400">
+          <div className="m-2  w-3/5 rounded-lg border border-gray-200 bg-blue-50 shadow dark:border-gray-700 dark:bg-gray-800">
             <BarChart />
           </div>
         </section>
 
-        <section className="flex h-3/6 overflow-scroll bg-green-400">
-          <div className="m-2 w-3/5 rounded-md border-solid bg-purple-400">
+        <section className="h-3.5/6 flex overflow-scroll ">
+          <div className="m-2 w-3/5 rounded-lg border border-gray-200 shadow dark:border-gray-700 dark:bg-gray-800">
             <Activity />
             <List />
           </div>
-          <div className="m-2  w-2/5 rounded-lg border-solid bg-yellow-400">
+          <div className="m-2  w-2/5 rounded-lg border border-gray-200  shadow dark:border-gray-700 dark:bg-gray-800">
             <Scheduler />
           </div>
         </section>
