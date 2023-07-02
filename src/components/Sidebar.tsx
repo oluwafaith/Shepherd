@@ -1,7 +1,7 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
-import { Link } from 'react-router-dom';
 import { SidebarData } from '../data/sidebarData';
 
 function Sidebar() {
@@ -10,9 +10,9 @@ function Sidebar() {
   const toggleSidebar = () => {
     setShowSidebar(!showSidebar);
   };
+
   return (
     <>
-    
       <button
         type="button"
         onClick={toggleSidebar}
@@ -25,13 +25,21 @@ function Sidebar() {
           <FaIcons.FaBars className="h-6 w-6" />
         )}
       </button>
+
+      {showSidebar && (
+        <div
+          className="fixed left-0 top-0 z-30 h-screen w-screen bg-gray-900 opacity-50 sm:hidden"
+          onClick={toggleSidebar}
+        />
+      )}
+
       <aside
-        className={`fixed left-0 top-0 z-40 h-screen w-full  transform overflow-y-auto border-r bg-white transition-all duration-300 ease-in-out dark:bg-gray-800 ${
+        className={`fixed left-0 top-0 z-40 h-screen w-56 overflow-y-auto border-r bg-white transition-all duration-300 ease-in-out dark:bg-gray-800 ${
           showSidebar ? 'translate-x-0' : '-translate-x-full sm:translate-x-0'
         } sm:static sm:left-auto`}
         aria-label="Sidebar"
       >
-        <div className="h-full overflow-y-auto bg-gray-50 px-3 py-4 dark:bg-gray-800">
+        <div className="h-full bg-white px-3 py-4 dark:bg-gray-800">
           <ul className="space-y-2 font-medium">
             {SidebarData.map((item) => (
               <li key={item.id}>

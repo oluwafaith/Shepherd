@@ -1,11 +1,6 @@
 import { AiTwotoneHome } from 'react-icons/ai';
 import { BsPlayCircle } from 'react-icons/bs';
 import {
-  FaBehance,
-  FaFacebook,
-  FaLinkedin,
-  FaTwitter,
-  FaSketch,
   FaUserFriends,
   FaFolderOpen,
   FaCalendarAlt,
@@ -76,34 +71,6 @@ export const SidebarData = [
   },
 ];
 
-export const Social = [
-  {
-    id: 1,
-    url: 'https://www.twitter.com',
-    icon: <FaFacebook />,
-  },
-  {
-    id: 2,
-    url: 'https://www.twitter.com',
-    icon: <FaTwitter />,
-  },
-  {
-    id: 3,
-    url: 'https://www.twitter.com',
-    icon: <FaLinkedin />,
-  },
-  {
-    id: 4,
-    url: 'https://www.twitter.com',
-    icon: <FaBehance />,
-  },
-  {
-    id: 5,
-    url: 'https://www.twitter.com',
-    icon: <FaSketch />,
-  },
-];
-
 export const DropdownData = [
   {
     id: 1,
@@ -113,12 +80,12 @@ export const DropdownData = [
 
   {
     id: 2,
-    text: 'Today',
+    text: 'This week',
     icon: <RiCalendar2Fill />,
   },
   {
     id: 3,
-    text: 'This month',
+    text: 'This week',
     icon: <RiCalendar2Fill />,
   },
 ];

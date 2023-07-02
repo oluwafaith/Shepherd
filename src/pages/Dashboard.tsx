@@ -10,7 +10,7 @@ import CardFooter from '../components/CardFooter';
 function Dashboard() {
   return (
     <main className="flex  bg-white">
-      <aside className="h-screen w-1/6 border-r-2 border-blue-400 bg-white ">
+      <aside className="h-screen w-1/6 border-r-2 border-blue-400 bg-white  ">
         <Sidebar />
       </aside>
 
@@ -19,7 +19,7 @@ function Dashboard() {
           <Header />
         </section>
 
-        <section className=" relative flex  h-2/6 justify-around ">
+        <section className=" h-2.5/6 relative  flex justify-around ">
           <aside className="m-2 w-2/5  flex-grow  flex-col rounded-lg border border-gray-200 bg-gray-300 shadow dark:border-gray-700 dark:bg-gray-800 ">
             <Summary />
             <hr />

@@ -22,15 +22,15 @@ function Dropdown() {
         onClick={handleClick}
         id="dropdownDefaultButton"
         data-dropdown-toggle="dropdown"
-        className="inline-flex items-center rounded-lg bg-white px-4 py-2.5 text-center text-sm font-medium text-black hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:bg-gray-100 dark:hover:bg-gray-100 dark:focus:ring-gray-100"
+        className="inline-flex items-center rounded-lg bg-white px-4 py-2 text-center text-sm font-medium text-black hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-gray-200 dark:bg-gray-100 dark:hover:bg-blue-100 dark:focus:ring-gray-100"
         type="button"
       >
-        <span className="mr-4">
+        <span className="flex w-6 items-center">
           <RiCalendar2Fill />
         </span>
-        {selected}
+        <span className="flex-grow">{selected}</span>
         <svg
-          className="ml-2 h-4 w-4"
+          className="h-4 w-4"
           aria-hidden="true"
           fill="none"
           stroke="currentColor"
@@ -49,11 +49,11 @@ function Dropdown() {
       <div
         id="dropdown"
         className={`${
-          open ? 'z-10' : 'hidden'
-        } w-44 divide-y divide-gray-100 rounded-lg bg-white shadow dark:bg-gray-700`}
+          open ? '' : 'hidden'
+        } absolute z-10 mt-2  w-36 divide-y divide-gray-100 rounded-lg bg-white shadow dark:bg-gray-700`}
       >
         <ul
-          className="py-2 text-sm text-gray-700 dark:text-gray-200"
+          className="py-1 text-sm text-gray-700 dark:text-gray-200"
           aria-labelledby="dropdownDefaultButton"
         >
           {DropdownData.map((item) => (

@@ -2,7 +2,7 @@ import { MdOutlineLibraryBooks } from 'react-icons/md';
 
 function Summary() {
   return (
-    <article className="bg-white">
+    <article className="bg-white p-2">
       <h3 className="mb-2  flex flex-grow items-center justify-start   text-lg font-semibold">
         <span className="mr-2">
           <MdOutlineLibraryBooks />
@@ -17,13 +17,13 @@ function Summary() {
             <span className=" text-lg font-semibold text-black">0</span>cards
           </p>
         </div>
-        <div className="flex flex-1 flex-col  items-start  ">
+        <article className="flex  flex-1 flex-col items-start  pl-4  ">
           <h4>Time studied</h4>
           <p>
             <span className="text-lg font-semibold text-black">05</span>hrs{' '}
             <span className="text-lg font-semibold text-black">30</span>mins
           </p>
-        </div>
+        </article>
       </div>
     </article>
   );

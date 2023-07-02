@@ -66,7 +66,7 @@ function Carousel() {
             >
               <div className="absolute left-1/2 top-1/2 h-4 w-auto -translate-x-1/2 -translate-y-1/2 transform rounded-full border-4 border-gray-400 p-2 md:h-12">
                 <img
-                  src={`/src/assets/${img[index].img}.png`}
+                  src={`${img[index].img}.png`}
                   className="h-full w-full object-contain"
                   alt="..."
                 />

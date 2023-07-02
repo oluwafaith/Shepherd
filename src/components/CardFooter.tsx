@@ -2,7 +2,7 @@ import { BsLightningChargeFill } from 'react-icons/bs';
 
 function CardFooter() {
   return (
-    <article className="    flex items-center ">
+    <article className="flex items-center ">
       <span className=" mr-1 text-orange-300">
         <BsLightningChargeFill />
       </span>

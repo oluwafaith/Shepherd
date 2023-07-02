@@ -21,27 +21,26 @@ const activities = [
     date: 'June 30, 2023',
     icon: FiMessageCircle,
   },
-
   // Add more activities with their respective icons
 ];
 
 const List = () => {
   return (
-    <div className="mx-auto max-w-md overflow-hidden bg-white md:max-w-2xl">
-      <ul>
+    <section className="mx-auto max-w-md overflow-hidden bg-white md:max-w-2xl">
+      <ul className="relative">
         {activities.map((activity, index) => {
           const Icon = activity.icon;
 
           return (
             <li key={index} className="px-4 py-3">
               <div className="flex items-center">
-                <div className="relative flex-shrink-0">
-                  {index !== 0 && (
-                    <div className="absolute -left-1 top-0 h-10 w-0.5 bg-gray-300"></div>
-                  )}
+                <div className="relative">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-100 shadow">
                     <Icon className="text-white" />
                   </div>
+                  {index !== activities.length - 1 && (
+                    <div className="absolute left-4 top-0 h-full w-0.5 bg-gray-300" />
+                  )}
                 </div>
                 <div className="ml-4">
                   <h4 className="text-lg font-semibold">{activity.title}</h4>
@@ -53,7 +52,7 @@ const List = () => {
           );
         })}
       </ul>
-    </div>
+    </section>
   );
 };
 
