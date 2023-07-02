@@ -1,4 +1,4 @@
-import Home from './pages/Home';
+// import Home from './pages/Home';
 import Sidebar from './components/Sidebar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import List from './components/List';
@@ -17,7 +17,7 @@ function App() {
       <Router>
         {/* <Sidebar /> */}
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Dashboard />} />
           <Route path="/sidebar" element={<Sidebar />} />
           <Route path="/events" element={<Events />} />
           <Route path="/list" element={<List />} />
