@@ -4,6 +4,7 @@ import { endOfWeek, isWithinInterval, startOfWeek } from 'date-fns';
 import { DayPicker, Row, RowProps } from 'react-day-picker';
 
 import 'react-day-picker/dist/style.css';
+import Events from './Events';
 
 function CurrentWeekRow(props: RowProps) {
   const isDateInCurrentWeek = (dateToCheck: Date) => {
@@ -29,6 +30,7 @@ function Scheduler() {
             components={{ Row: CurrentWeekRow }}
             showOutsideDays
             mode="single"
+            footer={<Events />}
           />
         </div>
       </div>

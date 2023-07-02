@@ -59,7 +59,7 @@ function Carousel() {
                 className="absolute left-1/2 top-1/2 h-40 w-auto -translate-x-1/2 -translate-y-1/2 transform md:h-72"
                 alt="..."
               />
-              <p className="absolute bottom-4 left-1/2 -translate-x-1/2 transform text-sm font-medium text-black">
+              <p className="text- absolute bottom-4 left-1/2 -translate-x-1/2 transform text-sm font-medium">
                 {img[index].text}
               </p>
             </div>

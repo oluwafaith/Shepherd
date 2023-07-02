@@ -28,12 +28,13 @@ const activities = [
     date: 'June 30, 2023',
     icon: FiMessageCircle,
   },
+
   // Add more activities with their respective icons
 ];
 
 const List = () => {
   return (
-    <div className="mx-auto max-w-md bg-white md:max-w-2xl">
+    <div className="mx-auto max-w-md overflow-hidden bg-white md:max-w-2xl">
       <ul>
         {activities.map((activity, index) => {
           const Icon = activity.icon;

@@ -1,12 +1,20 @@
 import React from 'react';
 import { MdOutlineLibraryBooks } from 'react-icons/md';
+import Sidebar from '../components/Sidebar';
+import BarChart from '../components/BarChart';
+import Activity from '../components/Activity';
+import List from '../components/List';
+import Scheduler from '../components/Scheduler';
+import Carousel from '../components/Carousel';
 function Dashboard() {
   return (
     <main className="flex  bg-white">
-      <aside className="h-screen w-1/6 border-r-2 border-blue-400 bg-white "></aside>
+      <aside className="h-screen w-1/6 border-r-2 border-blue-400 bg-white ">
+        <Sidebar />
+      </aside>
 
       <section className=" mr-2 h-screen  w-5/6 border-r-2  border-black  ">
-        <section className="h-1/6 bg-gray-100"></section>
+        <section className="h-1/6 bg-gray-100">hi</section>
 
         <section className=" flex h-2/6 justify-around">
           <aside className="m-2  w-2/5 rounded-lg border-solid border-gray-500 ">
@@ -28,6 +36,7 @@ function Dashboard() {
                 </div>
               </div>
             </article>
+
             <article className=" bg-blue-100">
               <h4>Flashcard Performance</h4>
               <article className="flex">
@@ -37,14 +46,25 @@ function Dashboard() {
                   <span>40%</span>
                 </div>
               </article>
+              <article>
+                <Carousel />
+              </article>
             </article>
           </aside>
-          <div className="m-2 w-3/5 rounded-md border-solid bg-purple-400"></div>
+
+          <div className="m-2  w-3/5 rounded-md border-solid bg-pink-400">
+            <BarChart />
+          </div>
         </section>
 
-        <section className="flex h-3/6 bg-green-400">
-          <div className="m-2 w-3/5 rounded-md border-solid bg-purple-400"></div>
-          <div className="m-2  w-2/5 rounded-lg border-solid bg-yellow-400"></div>
+        <section className="flex h-3/6 overflow-scroll bg-green-400">
+          <div className="m-2 w-3/5 rounded-md border-solid bg-purple-400">
+            <Activity />
+            <List />
+          </div>
+          <div className="m-2  w-2/5 rounded-lg border-solid bg-yellow-400">
+            <Scheduler />
+          </div>
         </section>
       </section>
     </main>

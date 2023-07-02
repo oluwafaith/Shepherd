@@ -46,9 +46,11 @@ const data = {
 
 function BarChart() {
   return (
-    <div>
-      <h3>Quiz performance</h3>
-      <Bar data={data} options={options} style={{ width: '10%' }} />
+    <div className="w-fit">
+      <h3>Quiz Performance</h3>
+      <div className=" h-1/6">
+        <Bar data={data} options={options} style={{ width: '100%' }} />
+      </div>
     </div>
   );
 }

@@ -51,7 +51,7 @@ function Sidebar() {
         )}
       </button>
       <aside
-        className={`fixed left-0 top-0 z-40 h-screen w-64 transform overflow-y-auto border-r bg-white transition-all duration-300 ease-in-out dark:bg-gray-800 ${
+        className={`fixed left-0 top-0 z-40 h-screen w-full  transform overflow-y-auto border-r bg-white transition-all duration-300 ease-in-out dark:bg-gray-800 ${
           showSidebar ? 'translate-x-0' : '-translate-x-full sm:translate-x-0'
         } sm:static sm:left-auto`}
         aria-label="Sidebar"
