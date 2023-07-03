@@ -68,7 +68,7 @@ function Carousel() {
                 <img
                   src={`${img[index].img}.png`}
                   className="h-full w-full object-contain"
-                  alt="..."
+                  alt="carousel"
                 />
               </div>
 

@@ -1,45 +1,21 @@
-import { FiActivity, FiStar, FiMessageCircle } from 'react-icons/fi';
-
-const activities = [
-  {
-    title: 'Activity 1',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    date: 'June 28, 2023',
-    icon: FiActivity,
-  },
-  {
-    title: 'Activity 2',
-    description:
-      'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    date: 'June 29, 2023',
-    icon: FiStar,
-  },
-  {
-    title: 'Activity 3',
-    description:
-      'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
-    date: 'June 30, 2023',
-    icon: FiMessageCircle,
-  },
-  // Add more activities with their respective icons
-];
+import { Activities } from '../data/Data';
 
 const List = () => {
   return (
     <section className="mx-auto max-w-md overflow-hidden bg-white md:max-w-2xl">
       <ul className="relative">
-        {activities.map((activity, index) => {
+        {Activities.map((activity, index) => {
           const Icon = activity.icon;
 
           return (
             <li key={index} className="px-4 py-3">
               <div className="flex items-center">
                 <div className="relative">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-100 shadow">
-                    <Icon className="text-white" />
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-orange-100 shadow">
+                    <Icon className="text-orange-300" />
                   </div>
-                  {index !== activities.length - 1 && (
-                    <div className="absolute left-4 top-0 h-full w-0.5 bg-gray-300" />
+                  {index !== Activities.length - 1 && (
+                    <div className=" absolute left-6 h-full w-0.5 bg-gray-300"></div>
                   )}
                 </div>
                 <div className="ml-4">

@@ -4,7 +4,7 @@ function Summary() {
   return (
     <article className="bg-white p-2">
       <h3 className="mb-2  flex flex-grow items-center justify-start   text-lg font-semibold">
-        <span className="mr-2">
+        <span className="mr-2 text-gray-500">
           <MdOutlineLibraryBooks />
         </span>
         Weekly Summary

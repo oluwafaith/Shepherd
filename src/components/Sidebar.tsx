@@ -2,7 +2,9 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
-import { SidebarData } from '../data/sidebarData';
+import { SidebarData, SidebarDataB } from '../data/Data';
+import { TbPinnedFilled } from 'react-icons/tb';
+import { AiOutlineDown } from 'react-icons/ai';
 
 function Sidebar() {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -16,7 +18,7 @@ function Sidebar() {
       <button
         type="button"
         onClick={toggleSidebar}
-        className="ml-3 mt-2 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 sm:hidden"
+        className="ml-3 mt-2 inline-flex items-center rounded-lg p-2 text-sm text-gray-500  hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 sm:hidden"
       >
         <span className="sr-only">Open sidebar</span>
         {showSidebar ? (
@@ -34,7 +36,7 @@ function Sidebar() {
       )}
 
       <aside
-        className={`fixed left-0 top-0 z-40 h-screen w-56 overflow-y-auto border-r bg-white transition-all duration-300 ease-in-out dark:bg-gray-800 ${
+        className={`fixed left-0 top-0 z-40 h-screen w-56 overflow-y-auto  border-r-2 border-blue-500 bg-white transition-all duration-300 ease-in-out dark:bg-gray-800 ${
           showSidebar ? 'translate-x-0' : '-translate-x-full sm:translate-x-0'
         } sm:static sm:left-auto`}
         aria-label="Sidebar"
@@ -45,7 +47,7 @@ function Sidebar() {
               <li key={item.id}>
                 <Link
                   to="#"
-                  className="flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                  className="flex items-center rounded-lg p-2 text-gray-500 hover:bg-blue-50 hover:text-blue-500 dark:text-white dark:hover:bg-gray-700"
                 >
                   {item.icon}
                   <span className="ml-3 flex-1 whitespace-nowrap">
@@ -57,11 +59,11 @@ function Sidebar() {
           </ul>
 
           <ul className="mt-4 space-y-2 border-t border-gray-200 pt-4 font-medium dark:border-gray-700">
-            {SidebarData.map((item) => (
+            {SidebarDataB.map((item) => (
               <li key={item.id}>
                 <Link
                   to="#"
-                  className="flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                  className="flex items-center rounded-lg p-2 text-gray-500 hover:bg-blue-50 hover:text-blue-500 dark:text-white dark:hover:bg-gray-700"
                 >
                   {item.icon}
                   <span className="ml-3 flex-1 whitespace-nowrap">
@@ -70,6 +72,17 @@ function Sidebar() {
                 </Link>
               </li>
             ))}
+          </ul>
+          <ul className="mt-4 space-y-2 border-t border-gray-200 pt-4 font-medium dark:border-gray-700">
+            <li className="flex items-center text-gray-500 hover:bg-blue-50 hover:text-blue-500">
+              <span className="pr-2">
+                <TbPinnedFilled />
+              </span>
+              Pinned Notes{' '}
+              <span className="pl-6">
+                <AiOutlineDown />
+              </span>
+            </li>
           </ul>
         </div>
       </aside>

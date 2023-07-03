@@ -6,6 +6,7 @@ import {
   Title,
   Tooltip,
   Legend,
+  ChartOptions,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 
@@ -18,19 +19,23 @@ ChartJS.register(
   Legend
 );
 
-const options = {
+const options: ChartOptions<'bar'> = {
   responsive: true,
+  maintainAspectRatio: false,
   plugins: {
     legend: {
-      // position: 'top' as const,
       display: false,
     },
-
-    // title: {
-    //   display: true,
-    //   text: 'Chart.js Bar Chart',
-    // },
-    maintainAspectRatio: false,
+  },
+  scales: {
+    y: {
+      min: 0,
+      max: 100,
+      ticks: {
+        stepSize: 35,
+      },
+    },
+    x: {},
   },
 };
 
@@ -38,9 +43,9 @@ const labels = ['Bio', 'Phy', 'Chem', 'Eco', 'Eng', 'Bus', 'Sci', 'Lit'];
 
 const data = {
   labels,
+
   datasets: [
     {
-      // label: false,
       data: [90, 75, 50, 50, 40, 40, 55, 80],
       backgroundColor: 'rgba(37, 99, 235, 0.8)',
       barThickness: 10,
@@ -56,7 +61,7 @@ function BarChart() {
         <Bar
           data={data}
           options={options}
-          style={{ width: '90%', marginLeft: '4%' }}
+          style={{ width: '90%', height: '', marginLeft: '4%' }}
         />
       </div>
     </div>

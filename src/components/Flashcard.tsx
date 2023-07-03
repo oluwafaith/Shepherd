@@ -1,13 +1,8 @@
 import { BsFillSquareFill } from 'react-icons/bs';
 import Carousel from './Carousel';
+import { Card } from '../data/Data';
 
 function Flashcard() {
-  const card = [
-    { percent: 40, text: 'Got it right', color: 'green', id: 1 },
-    { percent: 40, text: "Don't remember", color: 'orange', id: 2 },
-    { percent: 20, text: 'Got it wrong', color: 'red', id: 3 },
-  ];
-
   const colorClasses = {
     green: 'text-green-500',
     orange: 'text-orange-500',
@@ -15,11 +10,11 @@ function Flashcard() {
   };
 
   return (
-    <article className="mb-2 flex bg-white pl-2 text-gray-400">
-      <article className="flex-1 border-r border-gray-300 pr-2 text-xs">
-        <h4 className="pb-2 pt-2 font-semibold">Flashcard Performance</h4>
-        {card.map((item) => (
-          <div key={item.id} className="flex items-center pb-2">
+    <article className="flex  bg-white pl-2 text-gray-400">
+      <article className="border-r border-gray-300 pb-8 pr-2 text-sm md:flex-1">
+        <h4 className="pb-3 pt-2 font-semibold">Flashcard Performance</h4>
+        {Card.map((item) => (
+          <div key={item.id} className="flex items-center pb-4">
             <span
               className={`${
                 colorClasses[item.color as keyof typeof colorClasses]
@@ -33,7 +28,7 @@ function Flashcard() {
         ))}
       </article>
 
-      <article className="flex-1">
+      <article className="md:flex-1">
         <Carousel />
       </article>
     </article>

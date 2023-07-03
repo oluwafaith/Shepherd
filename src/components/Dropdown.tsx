@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from 'react';
-import { DropdownData } from '../data/sidebarData';
+import { DropdownData } from '../data/Data';
 import { RiCalendar2Fill } from 'react-icons/ri';
 
 function Dropdown() {
@@ -12,7 +12,6 @@ function Dropdown() {
 
   const handleSelect = (event: any) => {
     const value = event.target.textContent;
-    console.log(value);
     setSelected(value);
   };
 
