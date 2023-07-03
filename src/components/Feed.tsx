@@ -1,6 +1,6 @@
 import { Activities } from '../data/Data';
 
-const List = () => {
+const Feed = () => {
   return (
     <section className="mx-auto max-w-md overflow-hidden bg-white md:max-w-2xl">
       <ul className="relative">
@@ -18,10 +18,16 @@ const List = () => {
                     <div className=" absolute left-6 h-full w-0.5 bg-gray-300"></div>
                   )}
                 </div>
-                <div className="ml-4">
-                  <h4 className="text-lg font-semibold">{activity.title}</h4>
-                  <p className="text-gray-500">{activity.description}</p>
-                  <p className="mt-1 text-xs text-gray-400">{activity.date}</p>
+                <div className="ml-4 text-gray-400">
+                  <p className="mt-1 text-xs ">{activity.date}</p>
+                  <p className=" md: mb-1 text-xs  text-gray-600 md:text-sm md:font-normal">
+                    {activity.title}
+                  </p>
+                  <p className="">
+                    <span className="rounded-xl border-2 border-dashed  border-gray-300 p-1 text-xs">
+                      {activity.description}
+                    </span>
+                  </p>
                 </div>
               </div>
             </li>
@@ -32,4 +38,4 @@ const List = () => {
   );
 };
 
-export default List;
+export default Feed;

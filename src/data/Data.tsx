@@ -93,33 +93,27 @@ export const DropdownData = [
   },
 ];
 
-
-
-
 export const Activities = [
   {
-    title: 'Activity 1',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    date: 'June 28, 2023',
+    title: 'You uploaded documentationtitle.pdf to your workspace ',
+    description: 'Documentationtitle.pdf',
+    date: '2 hrs ago',
     icon: FiActivity,
   },
   {
-    title: 'Activity 2',
-    description:
-      'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    date: 'June 29, 2023',
+    title: 'You created a new note favoriteartistelisttitle.pdf',
+    description: 'Favoriteartistelist',
+    date: '7 hrs ago',
     icon: FiStar,
   },
   {
-    title: 'Activity 3',
-    description:
-      'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
-    date: 'June 30, 2023',
+    title:
+      'You created a new flashcard deck document titleflash from documenttitle.pdf',
+    description: 'Documenttitleflash',
+    date: 'Yesterday * 13:00',
     icon: FiMessageCircle,
   },
-
 ];
-
 
 export const EventData = [
   {

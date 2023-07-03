@@ -55,13 +55,13 @@ const data = {
 
 function BarChart() {
   return (
-    <div className="w-full">
+    <div className="md:w-full">
       <h3 className="ml-4">Quiz Performance</h3>
       <div className=" h-1/6">
         <Bar
           data={data}
           options={options}
-          style={{ width: '90%', height: '', marginLeft: '4%' }}
+          style={{ width: '90%', height: '60%', marginLeft: '4%' }}
         />
       </div>
     </div>

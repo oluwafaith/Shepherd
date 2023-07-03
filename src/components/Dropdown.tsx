@@ -13,6 +13,7 @@ function Dropdown() {
   const handleSelect = (event: any) => {
     const value = event.target.textContent;
     setSelected(value);
+    setOpen(!open);
   };
 
   return (

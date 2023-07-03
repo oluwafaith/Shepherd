@@ -49,22 +49,22 @@ function Carousel() {
     <>
       <div
         id="default-carousel"
-        className="relative w-full"
+        className="relative w-full "
         data-carousel="slide"
         onMouseEnter={toggleControlsVisibility}
         onMouseLeave={toggleControlsVisibility}
       >
         {/* Carousel wrapper */}
-        <div className="relative h-72 overflow-hidden rounded-lg md:h-28">
+        <div className="relative h-72 overflow-hidden rounded-lg  pt-16 md:h-36">
           {slides.map((index) => (
             <div
               key={index}
               className={`${
                 activeSlide === index ? 'block' : 'hidden'
-              } duration-700 ease-in-out`}
+              }   duration-700 ease-in-out`}
               data-carousel-item
             >
-              <div className="absolute left-1/2 top-1/2 h-4 w-auto -translate-x-1/2 -translate-y-1/2 transform rounded-full border-4 border-gray-400 p-2 md:h-12">
+              <div className="absolute left-1/2 top-1/2 h-12 w-auto -translate-x-1/2 -translate-y-1/2 transform rounded-full border-4 border-gray-400 p-2 md:h-16 md:w-auto ">
                 <img
                   src={`${img[index].img}.png`}
                   className="h-full w-full object-contain"
@@ -72,7 +72,7 @@ function Carousel() {
                 />
               </div>
 
-              <p className="absolute bottom-0 left-1/2 w-40 -translate-x-1/2 transform text-center text-xs font-normal">
+              <p className="absolute bottom-0 left-1/2 w-40 -translate-x-1/2 transform  text-center text-xs font-normal">
                 {img[index].text}
               </p>
             </div>

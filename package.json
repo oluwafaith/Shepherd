@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@types/react-icons": "^3.0.0",
-    "@types/react-vertical-timeline-component": "^3.3.3",
     "chart.js": "^4.3.0",
     "date-fns": "^2.30.0",
     "prettier": "^2.8.8",
@@ -21,8 +20,7 @@
     "react-day-picker": "^8.8.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
-    "react-router-dom": "^6.14.0",
-    "react-vertical-timeline-component": "^3.6.0"
+    "react-router-dom": "^6.14.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
