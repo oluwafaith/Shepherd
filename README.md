@@ -26,3 +26,7 @@ React Router
 Tailwind CSS
 React Icons
 Chartjs
+
+## Site
+
+https://faith-shepherd-assessment.netlify.app/
