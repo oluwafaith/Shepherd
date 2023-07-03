@@ -6,15 +6,20 @@ function Events() {
     orange: 'border-s-orange-400',
     red: 'border-s-red-400',
   };
+  const colorClasses = {
+    green: 'bg-green-100',
+    orange: 'bg-orange-100',
+    red: 'bg-red-100',
+  };
 
   return (
     <div>
       {EventData.map((item) => (
         <div
           key={item.id}
-          className={`mb-2 rounded-sm border-l-4  bg-${
-            item.color
-          }-100 z-40 p-1 ${
+          className={`mb-2 rounded-sm border-l-4 ${
+            colorClasses[item.color as keyof typeof colorClasses]
+          } z-40 p-1 ${
             bgClasses[item.color as keyof typeof bgClasses]
           } text-sm  text-gray-400 dark:text-${item.color}-400`}
         >
