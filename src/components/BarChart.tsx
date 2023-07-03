@@ -26,6 +26,13 @@ const options: ChartOptions<'bar'> = {
     legend: {
       display: false,
     },
+    tooltip: {
+      enabled: true,
+      titleAlign: 'center',
+      backgroundColor: 'white',
+      titleColor: 'black',
+      bodyColor: 'gray',
+    },
   },
   scales: {
     y: {
@@ -49,6 +56,7 @@ const data = {
       data: [90, 75, 50, 50, 40, 40, 55, 80],
       backgroundColor: 'rgba(37, 99, 235, 0.8)',
       barThickness: 10,
+      label: 'latest quiz score',
     },
   ],
 };
@@ -56,7 +64,7 @@ const data = {
 function BarChart() {
   return (
     <div className="md:w-full">
-      <h3 className="ml-4">Quiz Performance</h3>
+      <h3 className="ml-4 font-semibold">Quiz Performance</h3>
       <div className=" h-1/6">
         <Bar
           data={data}

@@ -38,7 +38,17 @@ function Scheduler() {
       </article>{' '}
       {/* date  */}
       <DayPicker
-        style={{ display: 'flex', justifyContent: 'center' }}
+        styles={{
+          head_cell: {
+            width: '60px',
+          },
+          table: {
+            maxWidth: 'none',
+          },
+          day: {
+            margin: 'auto',
+          },
+        }}
         components={{ Row: CurrentWeekRow }}
         showOutsideDays={true}
         mode="single"

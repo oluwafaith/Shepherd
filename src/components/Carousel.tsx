@@ -64,7 +64,7 @@ function Carousel() {
               }   duration-700 ease-in-out`}
               data-carousel-item
             >
-              <div className="absolute left-1/2 top-1/2 h-12 w-auto -translate-x-1/2 -translate-y-1/2 transform rounded-full border-4 border-gray-400 p-2 md:h-16 md:w-auto ">
+              <div className="absolute left-1/2 top-1/2  h-24 w-auto -translate-x-1/2 -translate-y-1/2 transform rounded-full border-4 border-gray-400 p-2 md:h-16 md:w-auto ">
                 <img
                   src={`${img[index].img}.png`}
                   className="h-full w-full object-contain"

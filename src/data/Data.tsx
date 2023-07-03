@@ -125,16 +125,18 @@ export const EventData = [
     end: '4: 30',
     duration: 1,
     color: 'orange',
+    bg: 'orange',
   },
   {
-    id: 1,
+    id: 2,
     icon: <BsArrowRightShort />,
     img: <MdFace />,
     text: 'Chemistry lesson with Leslie Peters',
     start: '3:30',
     end: '4: 30',
     duration: 1,
-    color: 'orange',
+    color: 'green',
+    bg: 'green',
   },
 ];
 
